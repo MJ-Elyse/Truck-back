@@ -2,7 +2,7 @@
     "builds": [{
         "src": "truck_api/wsgi.py",
         "use": "@vercel/python",
-        "config": { "macLambdaSize": "15mb", "runtime": "python3.9" }
+        "config": { "macLambdaSize": "15mb", "runtime": "python3" }
     }],
     "routes": [
         {
