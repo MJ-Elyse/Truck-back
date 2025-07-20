@@ -82,11 +82,11 @@ WSGI_APPLICATION = 'truck_api.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'truck_db',
+        'NAME': 'railway',
         'USER': 'root',
-        'PASSWORD': 'elyse',
-        'HOST': 'localhost',
-        'PORT': '3306',
+        'PASSWORD': 'vQlwrvKCmQPomJtkvrOAgbvzySJRzMtn',
+        'HOST': 'shinkansen.proxy.rlwy.net',
+        'PORT': '42461',
     }
 }
 
