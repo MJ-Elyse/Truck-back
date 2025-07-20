@@ -76,6 +76,15 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'truck_api.wsgi.application'
 
+import sys
+import mysql.connector
+
+class MySQLConnectorWrapper:
+    def __getattr__(self, attr):
+        return getattr(mysql.connector, attr)
+
+sys.modules['MySQLdb'] = MySQLConnectorWrapper()
+
 
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
