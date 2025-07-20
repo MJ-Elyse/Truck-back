@@ -76,28 +76,20 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'truck_api.wsgi.application'
 
-import sys
-import mysql.connector
-
-class MySQLConnectorWrapper:
-    def __getattr__(self, attr):
-        return getattr(mysql.connector, attr)
-
-sys.modules['MySQLdb'] = MySQLConnectorWrapper()
-
 
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
+        'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'railway',
-        'USER': 'root',
-        'PASSWORD': 'vQlwrvKCmQPomJtkvrOAgbvzySJRzMtn',
-        'HOST': 'shinkansen.proxy.rlwy.net',
-        'PORT': '42461',
+        'USER': 'postgres',
+        'PASSWORD': 'aILRWCbxxXEzspJyUZasWbDLhsvVExai',
+        'HOST': 'shuttle.proxy.rlwy.net',
+        'PORT': '30722',
     }
 }
+
 
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': (
